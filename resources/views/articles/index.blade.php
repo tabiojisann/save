@@ -1,12 +1,21 @@
 @extends('app')
 
-@section('title', '記事一覧')
+@section('title', 'トップページ')
+
 
 @section('content')
-  @include('nav')
-  <div class="container">
-    @foreach($articles as $article)
-      @include('articles.card')
-    @endforeach
-  </div>
+  @extends('nav')
+    <div class="wrapper  grey lighten-4">
+      <div class="title">
+          <h1 class="mx-auto" style="width: 200px;">Save URL</h1>
+      </div>
+
+      @auth
+        <div class="mx-auto" style="width: 200px;">
+          <td>USER NAME :</td>
+          <td>{{ Auth::user()->name }}</td>
+        </div> 
+      @endauth
+
+    </div>
 @endsection

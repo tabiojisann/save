@@ -9,13 +9,23 @@ use Tests\TestCase;
 class ArticleControllerTest extends TestCase
 {
     use RefreshDatabase;
-    
+
+   
+   
     public function testIndex()
     {
-        $response = $this->get(route('articles.index'));
+        $response = $this->get('/');
 
-        $response->assertStatus(200)
-            ->assertViewIs('articles.index');
+        $response->assertStatus(200);
             
     }
+    
+    // public function testIndex()
+    // {
+    //     $response = $this->get(route('articles.index'));
+
+    //     $response->assertStatus(200)
+    //         ->assertViewIs('articles.index');
+            
+    // }
 }
