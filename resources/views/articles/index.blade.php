@@ -1,4 +1,4 @@
-@extends('app')
+<!-- @extends('app')
 
 @section('title', 'トップページ')
 
@@ -18,4 +18,4 @@
       @endauth
 
     </div>
-@endsection
+@endsection -->
