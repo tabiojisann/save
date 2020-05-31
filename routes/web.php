@@ -13,6 +13,8 @@ Route::prefix('register')->name('register.')->group(function () {
 Route::get('/', 'ArticleController@index')->name('articles.index');
 Route::resource('/articles', 'ArticleController')->only(['store', 'destroy'])->middleware('auth');
 
+
+
 // Route::get('/', function() {
 //     return view('layout');
 // });

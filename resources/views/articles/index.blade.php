@@ -48,31 +48,23 @@
           <input name="url" required class="form-control">
         </div>
         <button type="submit" class="btn blue-gradient btn-block">投稿する</button>
-      </form>
-
+        </form>
+          
       @foreach($articles as $article)
-      <div class="card mt-3">
-        <div class="card-body d-flex flex-row">
-          <i class="fas fa-user-circle fa-3x mr-1"></i>
-          <div>
-            <div class="font-weight-lighter">
+      <div class="card">
+        <p>{{ $article->title }}</p>
+        <p>{{ $article->url }}</p>
+        <form action="{{ action('ArticleController@destroy', $article->id) }}" id="form_{{ $article->id }}" method="post" style="display:inline">
+          @csrf
+          @method('DELETE')
+          <button type="submit" class="btn btn-danger">削除</button>
+        </form>
+      </div>
 
-            </div>
-          </div>
-        </div>
-        <div class="card-body pt-0 pb-2">
-          <h3 class="h4 card-title">
-            {{ $article->title }} 
-          </h3>
-          <div class="card-text">
-            {!! nl2br(e( $article->url )) !!} 
-          </div>
-        </div>
-      </div> 
+   
       @endforeach
       {{ $articles->links() }}
       </div>
-    
       @endauth
 
      
