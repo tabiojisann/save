@@ -10,11 +10,12 @@ Route::prefix('register')->name('register.')->group(function () {
     Route::post('/{provider}', 'Auth\RegisterController@registerProviderUser')->name('{provider}');
 });
 
-// Route::get('/', 'ArticleController@index')->name('articles.index');
+Route::get('/', 'ArticleController@index')->name('articles.index');
+Route::resource('/articles', 'ArticleController')->only(['store', 'destroy'])->middleware('auth');
 
-Route::get('/', function() {
-    return view('layout');
-});
+// Route::get('/', function() {
+//     return view('layout');
+// });
 
 // Route::resource('/articles', 'ArticleController')->except(['index', 'show'])->middleware('auth');
 // Route::resource('/articles', 'ArticleController')->only(['show']);
