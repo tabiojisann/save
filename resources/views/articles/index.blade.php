@@ -5,13 +5,13 @@
 
 @section('content')
   @extends('nav')
-    <div class="wrapper  grey lighten-4">
+    <div class="wrapper  grey lighten-4" style="height: 200vh;">
       <div class="title">
-          <h1 class="text-center">Save MyArticle</h1>
+        <h1 class="text-center">Save MyArticle</h1>
       </div>
 
       @guest
-      <div class="form-inline mt-4" style="margin-left: 40%; m ">
+      <div class="form-inline mt-4" style="margin-left: 40%; ">
         <div class="md-form my-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
         </div>
@@ -58,25 +58,34 @@
           </div>
         </form> 
       </div>
-
      
 
       <!-- 記事一覧 -->
-        @foreach($articles as $article)
-        <div class="card">
-          <p>{{ $article->title }}</p>
-          <p>{{ $article->url }}</p>
-          <form action="{{ action('ArticleController@destroy', $article->id) }}" id="form_{{ $article->id }}" method="post" style="display:inline">
-            @csrf
-            @method('DELETE')
-            <button type="submit" class="btn btn-danger">削除</button>
-          </form>
+      @foreach($articles as $article)
+        <div class="card mx-auto" style="width: 60%; margin-top: 100px;">
+          <!--Card content-->
+          <div class="card-body">
+            <!--Title-->
+            <div style="border-bottom: solid 1px lightgrey;">
+            <h4 class="card-title">{{ $article->title }}</span></h4>
+            </div>
+      
+
+            
+            <!--Text-->
+            <p class="mt-4">{{ $article->url }}</p>
+            <form action="{{ action('ArticleController@destroy', $article->id) }}" id="form_{{ $article->id }}" method="post" style="display:inline">
+              @csrf
+              @method('DELETE')
+              <button type="submit" style="color: red;"><i class="fas fa-times "></i></button>
+            </form>
+          </div>
         </div>
-        @endforeach
-      <!-- 記事一覧 -->
-
+      @endforeach  
+      <!--記事一覧-->
+      <div class="mx-auto mt-5" style="width: 200px;">
         {{ $articles->links() }}
-
+      </div>
       @endauth
     </div>
       
