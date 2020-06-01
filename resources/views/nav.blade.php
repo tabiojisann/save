@@ -1,4 +1,3 @@
-<!-- <nav class="navbar navbar-expand navbar-dark blue-gradient"> -->
 <nav class="navbar navbar-expand-lg navbar-dark indigo fixed-top scrolling-navbar" style="height: 50px;">
 
   <a class="navbar-brand" href="/"><i class="far fas fa-search mr-1"></i></a>
@@ -15,8 +14,6 @@
     @endguest
 
     @auth
-
-    <!-- <a class="nav-link" href="/" style="font-size: 20px;" href="/">{{ Auth::user()->name }}</a> -->
     <!-- Dropdown -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
