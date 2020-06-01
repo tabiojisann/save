@@ -3,16 +3,6 @@
   <a class="navbar-brand" href="/"><i class="far fas fa-search mr-1"></i></a>
 
   <ul class="navbar-nav ml-auto">
-
-    @guest
-    <li class="nav-item">
-      <a class="nav-link" href="{{ route('register') }}">ユーザー登録</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{{ route('login') }}">ログイン</a>
-    </li>
-    @endguest
-
     @auth
     <!-- Dropdown -->
     <li class="nav-item dropdown">
