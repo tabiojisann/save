@@ -8,7 +8,7 @@
     <div class="wrapper  grey lighten-4" style="height: 200vh;">
       <div class="title mt-5">
         <h1 class="text-center">Save MyArticle</h1>
-      </div>   
+      </div>  
 
       @guest
         @include('modal')
@@ -20,7 +20,6 @@
         </div> 
 
         @include('error_card_list')
-        
         <div class="d-flex justify-content-around mt-5">
           <form method="get">
             @foreach ($request as $key=>$value)
@@ -28,13 +27,8 @@
                 <input type="hidden" name="{{$key}}" value="{{$value}}"/>
               @endif
             @endforeach 
-            <div class="md-form my-0 mt-5">
-                <input name="keyword" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" value="{{$request['keyword'] ?? ''}}" required>
-            </div>
-            <button class="btn btn-unique mt-5" style="border-radius: 30px;"><i class="far fas fa-search"> Search</i></button>
+            <Search></Search>
           </form>
-    
-
 
           <form method="POST" action="{{ route('articles.store') }}">
             @csrf

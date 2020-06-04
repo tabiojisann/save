@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark indigo fixed-top scrolling-navbar" style="height: 50px;">
 
-  <a class="navbar-brand" href="/"><i class="far fas fa-search mr-1"></i></a>
+  <a class="navbar-brand" href="/"><i class="fas fa-undo"></i></a>
 
   <ul class="navbar-nav ml-auto">
     @auth
