@@ -11,12 +11,22 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
-    public function index() {
-        // $articles = Article::all()->sortByDesc('created_at');
-        
-        $articles = DB::table('articles')->paginate(3);
+    public function index(Request $request) {
 
-        return view('articles.index', ['articles' => $articles]);
+        $query = Article::query();
+        
+        $keyword = $request->input('keyword');
+        if(!empty($keyword)) {
+            $query->where('title', 'like', '%' . $keyword . '%');
+        }
+
+        $perpage = $request->input('perpage', 3);
+
+        $articles = $query->paginate($perpage);
+        return view('articles.index', ['articles' => $articles->appends($request->except('page')), 'request'=>$request->except('page')]);
+
+        // $articles = DB::table('articles')->paginate(3);
+        // return view('articles.index', ['articles' => $articles]);
     }
 
     public function store(ArticleRequest $request, Article $article)

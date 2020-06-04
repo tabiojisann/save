@@ -23,7 +23,6 @@
         <div class="tab-content">
           <!--Panel 7-->
           <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
-
             <!--Body-->
             <form method="POST" action="{{ route('login') }}">
               @csrf
@@ -58,7 +57,7 @@
 
           <!--Panel 8-->
           <div class="tab-pane fade" id="panel8" role="tabpanel">
-
+            
             <!--Body-->
             <form method="POST" action="{{ route('register') }}">
               @csrf
@@ -110,7 +109,7 @@
   </div>
 </div>
 <!--Modal: Login / Register Form-->
-
+@include('error_card_list')
 <div class="text-center">
   <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm">Let's START</a>
 </div>
