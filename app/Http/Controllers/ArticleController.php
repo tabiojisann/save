@@ -20,13 +20,11 @@ class ArticleController extends Controller
             $query->where('title', 'like', '%' . $keyword . '%');
         }
 
-        $perpage = $request->input('perpage', 3);
+        $perpage = $request->input('perpage', 5);
 
         $articles = $query->paginate($perpage);
         return view('articles.index', ['articles' => $articles->appends($request->except('page')), 'request'=>$request->except('page')]);
-
-        // $articles = DB::table('articles')->paginate(3);
-        // return view('articles.index', ['articles' => $articles]);
+        
     }
 
     public function store(ArticleRequest $request, Article $article)

@@ -111,5 +111,5 @@
 <!--Modal: Login / Register Form-->
 @include('error_card_list')
 <div class="text-center">
-  <a href="" class="btn btn-default btn-rounded my-3" data-toggle="modal" data-target="#modalLRForm">Let's START</a>
+  <a href="" class="btn btn-default btn-rounded my-5" data-toggle="modal" data-target="#modalLRForm">Let's START</a>
 </div>
