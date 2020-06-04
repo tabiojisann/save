@@ -26,8 +26,11 @@
               @if ($key!="keyword")
                 <input type="hidden" name="{{$key}}" value="{{$value}}"/>
               @endif
-            @endforeach 
-            <Search></Search>
+            @endforeach    
+            <div class="md-form my-0 mt-5">
+              <input name="keyword" v-model="keyword" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" required>
+            </div>
+            <button class="btn btn-unique mt-5" style="border-radius: 30px;"><i class="far fas fa-search"> Search</i></button>
           </form>
 
           <form method="POST" action="{{ route('articles.store') }}">
