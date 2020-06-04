@@ -15,18 +15,22 @@
       @endguest
 
       @auth
-
         <div class="userName">
           <p class="user">USER NAME : {{ Auth::user()->name }}</p>
         </div> 
         
         <div class="d-flex justify-content-around mt-5">
-          <div class="mt-5 col-md-2">
-            <div class="md-form my-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <form method="get">
+            @foreach ($request as $key=>$value)
+              @if ($key!="keyword")
+                <input type="hidden" name="{{$key}}" value="{{$value}}" />
+              @endif
+            @endforeach
+            <div class="md-form my-0 mt-5">
+                <input name="keyword" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" value="{{$request['keyword'] ?? ''}}">
             </div>
             <button class="btn btn-unique mt-5" style="border-radius: 30px;"><i class="far fas fa-search"> Search</i></button>
-          </div> 
+          </form>
     
           @include('error_card_list')
 
@@ -51,7 +55,16 @@
             </div>
           </form> 
         </div>
-     
+
+        <!-- <form method="get">
+          @foreach ($request as $key=>$value)
+            @if ($key!="keyword")
+              <input type="hidden" name="{{$key}}" value="{{$value}}" />
+            @endif
+          @endforeach
+          <input type="text" class="form-control" name="keyword" placeholder="Name" value="{{$request['keyword'] ?? ''}}">
+          <button class="btn">Search</button>
+        </form> -->
 
         <!-- 記事一覧 -->
        
