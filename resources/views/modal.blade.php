@@ -46,9 +46,11 @@
             </form>
             <!--Footer-->
             <div class="modal-footer">
-              <div class="options text-center text-md-right mt-1">
-                <p>Not a member? <a href="#" class="blue-text">Sign Up</a></p>
-                <p>Forgot <a href="#" class="blue-text">Password?</a></p>
+              <div class="options text-center text-md-left mt-1">
+                <p style="font-weight: bold;">こちらでログインできます</p>
+                <p><span style="font-weight: bold;">email</span> : sample@gmail.com</p>
+                <p><span style="font-weight: bold;">password</span> : sampleuser</p>
+                <p><span style="font-weight: bold;">ユーザー名</span> : サンプルユーザー</p>
               </div>
               <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
             </div>
