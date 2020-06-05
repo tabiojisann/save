@@ -48,9 +48,9 @@
             <div class="modal-footer">
               <div class="options text-center text-md-left mt-1">
                 <p style="font-weight: bold;">こちらでログインできます</p>
-                <p><span style="font-weight: bold;">email</span> : sample@gmail.com</p>
-                <p><span style="font-weight: bold;">password</span> : sampleuser</p>
-                <p><span style="font-weight: bold;">ユーザー名</span> : サンプルユーザー</p>
+                <p><span style="font-weight: bold;">email</span> : yuruoji@gmail.com</p>
+                <p><span style="font-weight: bold;">password</span> : yuruoji123</p>
+                <p><span style="font-weight: bold;">ユーザー名</span> : ゆるふわ</p>
               </div>
               <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
             </div>
