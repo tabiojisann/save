@@ -39,4 +39,4 @@ http://save-url.work/          （サイトのリンクに飛びます）
 
 #### インフラ
 
-[![Image from Gyazo](https://i.gyazo.com/5484c1240648a156ad49dbc17903d89e.png)](https://gyazo.com/5484c1240648a156ad49dbc17903d89e)
+[![Image from Gyazo](https://i.gyazo.com/3a5bc34430e7f8da0fd5e698585be81d.png)](https://gyazo.com/3a5bc34430e7f8da0fd5e698585be81d)
