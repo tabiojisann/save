@@ -162,4 +162,4 @@ Resources:
           SourceSecurityGroupId: !Ref SecurityGroupForPublicServer
       Tags:
         - Key: Name
-          Value: !Sub ${AWS::StackName}-sg-for-private-server
+          Value: !Sub ${AWS::StackName}-sg-for-private-server  
