@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', 'トップページ')
+@section('title', 'saveURL')
 
 
 @section('content')
@@ -11,7 +11,7 @@
       </div>  
 
       @guest
-        @include('modal')
+        @include('TopPage')
       @endguest
 
       @auth
@@ -20,6 +20,7 @@
         </div> 
 
         @include('error_card_list')
+
         <div class="d-flex justify-content-around mt-5">
           <form method="get">
             @foreach ($request as $key=>$value)
@@ -83,5 +84,5 @@
         </div>
       @endauth
     </div>
-      
+  </div>   
 @endsection
